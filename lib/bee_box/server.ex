@@ -25,8 +25,7 @@ defmodule BeeBox.Server do
   end
 
   defp new_server(client) do
-    {:ok, pid} =  Task.Supervisor.start_child(
-      BeeBox.ServerTaskSupervisor, fn -> serve(client) end)
+    {:ok, pid} =  Task.Supervisor.start_child(BeeBox.TaskSupervisor, fn -> serve(client) end)
 
     #This makes the child process the “controlling process” of the client socket.
     #Otherwise the acceptor would bring down all the clients if it crashed

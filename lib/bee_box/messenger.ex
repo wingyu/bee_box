@@ -17,7 +17,7 @@ defmodule BeeBox.Messenger do
 
   defp async_send_messages(segmented_clients, sender, message) do
     Enum.each(segmented_clients, fn(client_segment) ->
-      Task.Supervisor.start_child(BeeBox.MessengerTaskSupervisor, fn ->
+      Task.Supervisor.start_child(BeeBox.TaskSupervisor, fn ->
         send_messages(client_segment, sender, message)
       end)
     end)

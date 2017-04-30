@@ -8,8 +8,7 @@ defmodule BeeBox.ServerSupervisor do
     ]
 
     children = [
-      supervisor(Task.Supervisor, [[name: BeeBox.MessengerTaskSupervisor]]),
-      supervisor(Task.Supervisor, [[name: BeeBox.ServerTaskSupervisor]]),
+      supervisor(Task.Supervisor, [[name: BeeBox.TaskSupervisor]]),
       worker(Task, [BeeBox.Server, :accept, [4040]])
     ]
 
