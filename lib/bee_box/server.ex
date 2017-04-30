@@ -1,4 +1,4 @@
-defmodule BeeBoxTCP do
+defmodule BeeBox.Server do
   require Logger
 
   def accept(port) do

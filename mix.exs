@@ -16,7 +16,7 @@ defmodule BeeBox.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger],
-     mod: {BeeBox.Application, []}]
+     mod: {BeeBox, []}]
   end
 
   # Dependencies can be Hex packages:
