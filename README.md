@@ -1,6 +1,6 @@
 # BeeBox
 
-A fault-tolerant TCP Chat Server
+A fault-tolerant TCP Chat Server (Just a learning exercise for Elixir)
 
 ## Set Up
 1. Run `iex -S mix`
